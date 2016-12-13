@@ -111,7 +111,7 @@
 		(text "Which texture do you prefer?"))
 	(question
 		(ident price)
-		(type price-price)
+		(type price-answer)
 		(text "How many budget do you have?"))
 	(question
 		(ident skintone)
@@ -152,7 +152,7 @@
 	(bind ?name (read))
 	(printout t crlf "*****************************" crlf)
 	(printout t "Hello, " ?name "." crlf)
-	(printout t "I am a Lipzy. Nice to meet you!" crlf)
+	(printout t "I am Lipzy. Nice to meet you!" crlf)
 	(printout t "Please answer the questions and" crlf)
 	(printout t "I will tell you what kind of" crlf)
 	(printout t "lipstick you may need." crlf)
@@ -161,7 +161,6 @@
 (defmodule interview)
 
 (defrule request-shape
-	(answer (ident shape))
 	=>
 	(assert (ask shape)))
 
@@ -170,7 +169,7 @@
 	=>
 	(assert (MAIN::ask texture-liquid)))
 
-(defrule request-texture-liquid
+(defrule request-texture-stick
 	(answer (ident shape) (text ?d&:(eq ?d stick)))
 	=>
 	(assert (MAIN::ask texture-stick)))
@@ -199,10 +198,10 @@
 
 (defrule lipstick-a
 	(lipstick
-		(shape ?liquid)
-		(texture ?matte)
-		(price ?1)
-		(skintone ?white))
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk white)))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
