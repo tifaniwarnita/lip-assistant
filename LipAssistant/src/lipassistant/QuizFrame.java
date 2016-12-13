@@ -271,7 +271,7 @@ public class QuizFrame extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(107, 86, 86));
         jLabel6.setText("Your MLBB lipstick is...");
         resultPanel.add(jLabel6);
-        jLabel6.setBounds(300, 170, 370, 60);
+        jLabel6.setBounds(290, 170, 400, 60);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);

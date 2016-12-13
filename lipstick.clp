@@ -71,7 +71,7 @@
 	"Ask a question, and return the answer"
 	(bind ?answer "")
 	(while (not (is-of-type ?answer ?type)) do
-		(printout t ?question " ")
+		(printout t crlf ?question " ")
 		(if (eq ?type yes-no) then
 			(printout t "(yes or no) ")
 		else (if (eq ?type shape-answer) then
