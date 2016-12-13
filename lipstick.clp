@@ -182,9 +182,21 @@
 	=>
 	(assert (ask skintone)))
 
-(defrule assert-interview-fact
-	(answer (ident shape) (text ?sh))
-	(answer (ident texture) (text ?tx))
+(defrule assert-interview-fact-1
+	(answer (ident shape) (text ?sh&:(eq ?sh liquid)))
+	(answer (ident texture-liquid) (text ?tx))
+	(answer (ident price) (text ?pr))
+	(answer (ident skintone) (text ?sk))
+	=>
+	(assert (lipstick
+		(shape ?sh)
+		(texture ?tx)
+		(price ?pr)
+		(skintone ?sk))))
+
+(defrule assert-interview-fact-2
+	(answer (ident shape) (text ?sh&:(eq ?sh stick)))
+	(answer (ident texture-stick) (text ?tx))
 	(answer (ident price) (text ?pr))
 	(answer (ident skintone) (text ?sk))
 	=>
@@ -205,8 +217,7 @@
 	=>
 	(assert (recommendation
 		(name lipstick-a)
-		(explanation "Cocok kerja di air")))
-	(prinout "MIAW"))
+		(explanation "Cocok kerja di air"))))
 
 (defmodule report)
 
