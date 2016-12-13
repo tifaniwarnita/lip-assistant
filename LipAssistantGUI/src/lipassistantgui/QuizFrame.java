@@ -10,7 +10,10 @@ import java.awt.Color;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -24,19 +27,31 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.Style;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
+import jess.Fact;
+import jess.JessException;
+import jess.RU;
+import jess.Rete;
+import jess.Value;
+import jess.ValueVector;
 /**
  *
  * @author Tifani
  */
 public class QuizFrame extends javax.swing.JFrame {
-
+    Rete engine = new Rete();
+    Fact fact;
+    
+    
     private int currentQuestion = 0;
     /**
      * Creates new form GameFrame
      */
-    public QuizFrame() {
+    public QuizFrame() throws JessException {
+        engine.clear();
+        engine.reset();
+        engine.batch("C:/Users/jessica/Documents/GitHub/lip-assistant/LipAssistantGUI/lipstickrules.clp");
+        fact = new Fact("lipstick", engine);
         initComponents();
-
 //        ImageIcon img = new ImageIcon(getClass().getResource("/werewolvesinwonderland/client/assets/icon_werewolf.png"));
 //        this.setIconImage(img.getImage());
         this.setTitle("MLBB Lipstick Assistant");
@@ -311,7 +326,11 @@ public class QuizFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnChoice3MouseClicked
 
     private void btnChoice3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChoice3ActionPerformed
-        proceedQuiz(btnChoice3.getText());
+        try {
+            proceedQuiz(btnChoice3.getText());
+        } catch (JessException ex) {
+            Logger.getLogger(QuizFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnChoice3ActionPerformed
 
     private void btnChoice1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnChoice1MouseClicked
@@ -319,11 +338,19 @@ public class QuizFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnChoice1MouseClicked
 
     private void btnChoice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChoice1ActionPerformed
-        proceedQuiz(btnChoice1.getText());
+        try {
+            proceedQuiz(btnChoice1.getText());
+        } catch (JessException ex) {
+            Logger.getLogger(QuizFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnChoice1ActionPerformed
 
     private void btnChoice2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChoice2ActionPerformed
-        proceedQuiz(btnChoice2.getText());
+        try {
+            proceedQuiz(btnChoice2.getText());
+        } catch (JessException ex) {
+            Logger.getLogger(QuizFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnChoice2ActionPerformed
 
     private void btnChoice2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnChoice2MouseClicked
@@ -378,11 +405,12 @@ public class QuizFrame extends javax.swing.JFrame {
         changeScreen("quizPanel");
     }
     
-    private void proceedQuiz(String answer) {
+    private void proceedQuiz(String answer) throws JessException {
+        System.out.println(answer);
         if (currentQuestion==1) {
             lblQuestion.setText("Which texture do you prefer?");
             if (answer.equals("Stick")) {
-                //simpan jawaban
+                fact.setSlotValue("shape", new Value("stick", RU.STRING));
                 btnChoice1.setText("Matte");
                 changeImageChoice(1,"matte");
                 btnChoice2.setVisible(true);
@@ -392,7 +420,7 @@ public class QuizFrame extends javax.swing.JFrame {
                 btnChoice3.setText("Sheer");
                 changeImageChoice(3,"sheer");
             } else if (answer.equals("Liquid")) {
-                //simpan jawaban
+                fact.setSlotValue("shape", new Value(answer.toLowerCase(), RU.STRING));
                 btnChoice1.setText("Matte");
                 changeImageChoice(1,"matte");
                 btnChoice2.setVisible(true);
@@ -403,7 +431,7 @@ public class QuizFrame extends javax.swing.JFrame {
                 changeImageChoice(3,"stain");
             }
         } else if (currentQuestion==2) {
-            //simpan jawaban
+            fact.setSlotValue("texture", new Value(answer.toLowerCase(), RU.STRING));
             lblQuestion.setText("How much is your budget?");
             btnChoice1.setText("<100k");
             changeImageChoice(1,"100");
@@ -412,7 +440,7 @@ public class QuizFrame extends javax.swing.JFrame {
             btnChoice3.setText(">200k");
             changeImageChoice(3,"orangkaya");
         } else if (currentQuestion==3) {
-            //simpan jawaban
+            fact.setSlotValue("price", new Value(priceValue(answer), RU.STRING));
             lblQuestion.setText("What is your skintone?");
             btnChoice1.setText("Light");
             changeImageChoice(1,"light");
@@ -421,15 +449,32 @@ public class QuizFrame extends javax.swing.JFrame {
             btnChoice3.setText("Dark");
             changeImageChoice(3,"dark");
         } else if (currentQuestion==4) {
+            fact.setSlotValue("skintone", new Value(answer.toLowerCase(), RU.STRING));
+            engine.assertFact(fact);
             endQuiz();
         }
         currentQuestion++;
     }
     
-    private void endQuiz() {
-        String result = "dummy";
+    private void endQuiz() throws JessException {
+        engine.eval("(focus recommend)");
+        engine.eval("(run)");
+        
+        String result = "";
+        String explanation = "";
+        
+        Iterator it = engine.listFacts();
+        while (it.hasNext()) {
+            Fact fact = (Fact) it.next();
+            if (fact.getName().equals("MAIN::recommendation")){
+                result = fact.getSlotValue("name").toString();
+                explanation = fact.getSlotValue("explanation").toString();
+            }
+                
+        }
+        
         lblResult.setText(result);
-        //txtExplanation.setText(explanation);
+        txtExplanation.setText(explanation);
         changeScreen("resultPanel");
     }
     
@@ -440,6 +485,21 @@ public class QuizFrame extends javax.swing.JFrame {
             imgChoice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/"+image+".png")));
         } else if (no==3) {
             imgChoice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/"+image+".png")));
+        }
+    }
+    
+    private String priceValue(String answer){
+        if (answer.equals("<100k")){
+            return "a";
+        }
+        else if (answer.equals("100-200k")){
+            return "b";
+        }
+        else if (answer.equals(">200k")){
+            return "c";
+        }
+        else {
+            return "a";
         }
     }
    

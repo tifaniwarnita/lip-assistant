@@ -5,16 +5,19 @@
  */
 package lipassistantgui;
 
+import jess.JessException;
+
 /**
  *
  * @author ASUS X202E
  */
 public class LipAssistantGUI {
-    private static QuizFrame quizFrame = new QuizFrame();
+    private static QuizFrame quizFrame;
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JessException {
+        quizFrame = new QuizFrame();
         quizFrame.setVisible(true);
     }
     
