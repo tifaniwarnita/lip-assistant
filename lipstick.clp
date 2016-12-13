@@ -205,7 +205,8 @@
 	=>
 	(assert (recommendation
 		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(explanation "Cocok kerja di air")))
+	(prinout "MIAW"))
 
 (defmodule report)
 
