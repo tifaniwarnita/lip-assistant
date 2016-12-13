@@ -15,6 +15,9 @@
         <Class IRI="#Girlactik"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Allure"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Liquid"/>
     </Declaration>
     <Declaration>
@@ -31,6 +34,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#NYX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blushing"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MAC"/>
@@ -127,6 +133,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Revlon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Divine"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MeetMatteHughes"/>
@@ -590,6 +599,14 @@
         <Class IRI="#Lipstick"/>
     </SubClassOf>
     <ClassAssertion>
+        <Class IRI="#MatteLipPaint"/>
+        <NamedIndividual IRI="#Allure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MatteLipPaint"/>
+        <NamedIndividual IRI="#Blushing"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#SoftMatteLipCream"/>
         <NamedIndividual IRI="#Cannes"/>
     </ClassAssertion>
@@ -604,6 +621,10 @@
     <ClassAssertion>
         <Class IRI="#Skintone"/>
         <NamedIndividual IRI="#Dark"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MatteLipPaint"/>
+        <NamedIndividual IRI="#Divine"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Texture"/>
@@ -655,6 +676,16 @@
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Allure"/>
+        <NamedIndividual IRI="#Medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Blushing"/>
+        <NamedIndividual IRI="#Light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
         <NamedIndividual IRI="#Cannes"/>
         <NamedIndividual IRI="#Medium"/>
     </ObjectPropertyAssertion>
@@ -667,6 +698,11 @@
         <ObjectProperty IRI="#forSkintone"/>
         <NamedIndividual IRI="#Commited"/>
         <NamedIndividual IRI="#Light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Divine"/>
+        <NamedIndividual IRI="#Dark"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#forSkintone"/>
