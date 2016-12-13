@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/jessica/ontologies/2016/11/untitled-ontology-16"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/jessica/ontologies/2016/11/untitled-ontology-16">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Girlactik"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Liquid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SuperLustrousCremeLipstick"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#elfMatteLipColour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColourpopLippieStix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NYX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MAC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#e.l.f"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dark"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BenefitCheekAndLipStain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTexture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BodyShopLipAndCheekStain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UltraShineLipGel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shape"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPrice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Colourpop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftMatteLipCream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LOreal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EtudeHouse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBrand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trustworthy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stockholm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Texture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sheer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Light"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MatteLipPaint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnastasiaBeverlyHills"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skintone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColorRicheLipstick"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Matte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BodyShop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Commited"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MacSatinLipstick"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasShape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Revlon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeetMatteHughes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnastasiaLipGloss"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cannes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Satin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sephora"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lipstick"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stick"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gloss"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#forSkintone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Benefit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ButterGloss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TheBalm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FreshCherryTint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasColor"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AnastasiaLipGloss"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#AnastasiaBeverlyHills"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Gloss"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">215000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BenefitCheekAndLipStain"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#Benefit"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Stain"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">399000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BodyShopLipAndCheekStain"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#BodyShop"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Stain"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">179000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ButterGloss"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#NYX"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Gloss"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ColorRicheLipstick"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#LOreal"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Stick"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Satin"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">155000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ColourpopLippieStix"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#Colourpop"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Stick"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Matte"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">127000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FreshCherryTint"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#EtudeHouse"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Stain"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">67000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MacSatinLipstick"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#MAC"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Stick"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Satin"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">255000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MatteLipPaint"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#Girlactik"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Matte"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">340000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MeetMatteHughes"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#TheBalm"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Matte"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">167000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SoftMatteLipCream"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#NYX"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Matte"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">97000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SuperLustrousCremeLipstick"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#Revlon"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Stick"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Satin"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">65000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#UltraShineLipGel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#Sephora"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Liquid"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Gloss"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">180000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#elfMatteLipColour"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Lipstick"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasBrand"/>
+                <Class IRI="#e.l.f"/>
+            </ObjectAllValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasShape"/>
+                <NamedIndividual IRI="#Stick"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasTexture"/>
+                <NamedIndividual IRI="#Matte"/>
+            </ObjectHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasPrice"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">69000</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AnastasiaBeverlyHills"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnastasiaLipGloss"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Benefit"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BenefitCheekAndLipStain"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodyShop"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodyShopLipAndCheekStain"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ButterGloss"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColorRicheLipstick"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Colourpop"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColourpopLippieStix"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EtudeHouse"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FreshCherryTint"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Girlactik"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LOreal"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MAC"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MacSatinLipstick"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MatteLipPaint"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeetMatteHughes"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NYX"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Revlon"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sephora"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftMatteLipCream"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuperLustrousCremeLipstick"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TheBalm"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UltraShineLipGel"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#e.l.f"/>
+        <Class IRI="#Brand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#elfMatteLipColour"/>
+        <Class IRI="#Lipstick"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#SoftMatteLipCream"/>
+        <NamedIndividual IRI="#Cannes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MeetMatteHughes"/>
+        <NamedIndividual IRI="#Charming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MeetMatteHughes"/>
+        <NamedIndividual IRI="#Commited"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Skintone"/>
+        <NamedIndividual IRI="#Dark"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Texture"/>
+        <NamedIndividual IRI="#Gloss"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Skintone"/>
+        <NamedIndividual IRI="#Light"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shape"/>
+        <NamedIndividual IRI="#Liquid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Texture"/>
+        <NamedIndividual IRI="#Matte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Skintone"/>
+        <NamedIndividual IRI="#Medium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftMatteLipCream"/>
+        <NamedIndividual IRI="#Rome"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Texture"/>
+        <NamedIndividual IRI="#Satin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Texture"/>
+        <NamedIndividual IRI="#Sheer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Texture"/>
+        <NamedIndividual IRI="#Stain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shape"/>
+        <NamedIndividual IRI="#Stick"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SoftMatteLipCream"/>
+        <NamedIndividual IRI="#Stockholm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MeetMatteHughes"/>
+        <NamedIndividual IRI="#Trustworthy"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Cannes"/>
+        <NamedIndividual IRI="#Medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Charming"/>
+        <NamedIndividual IRI="#Medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Commited"/>
+        <NamedIndividual IRI="#Light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Rome"/>
+        <NamedIndividual IRI="#Dark"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Stockholm"/>
+        <NamedIndividual IRI="#Light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forSkintone"/>
+        <NamedIndividual IRI="#Trustworthy"/>
+        <NamedIndividual IRI="#Dark"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBrand"/>
+        <Class IRI="#Lipstick"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBrand"/>
+        <Class IRI="#Brand"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPrice"/>
+        <Class IRI="#Lipstick"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPrice"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
