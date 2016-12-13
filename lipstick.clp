@@ -231,7 +231,9 @@
 	=>
 	(assert (recommendation
 		(name "NYX Soft Matte Lip Color Stockholm")
-		(explanation "NYX Soft Matte Lip Color Stockholm"))))
+		(explanation
+			"Neither lipstick nor lip gloss, this matte lip cream is a new kind of lip color that goes on silky smooth and sets to a matte finish. Soft Matte Lip Cream is surprisingly durable and unlike some matte lipstick formulas, also moisturizing."
+		))))
 
 (defrule lipstick-liquid-matte-a-medium
 	(lipstick
@@ -242,7 +244,9 @@
 	=>
 	(assert (recommendation
 		(name "NYX Soft Matte Lip Color Cannes")
-		(explanation "NYX Soft Matte Lip Color Cannes"))))
+		(explanation 
+			"Neither lipstick nor lip gloss, this matte lip cream is a new kind of lip color that goes on silky smooth and sets to a matte finish. Soft Matte Lip Cream is surprisingly durable and unlike some matte lipstick formulas, also moisturizing."
+		))))
 
 (defrule lipstick-liquid-matte-a-dark
 	(lipstick
@@ -253,7 +257,9 @@
 	=>
 	(assert (recommendation
 		(name "NYX Soft Matte Lip Color Rome")
-		(explanation "NYX Soft Matte Lip Color Rome"))))
+		(explanation 
+			"Neither lipstick nor lip gloss, this matte lip cream is a new kind of lip color that goes on silky smooth and sets to a matte finish. Soft Matte Lip Cream is surprisingly durable and unlike some matte lipstick formulas, also moisturizing."
+		))))
 
 ;;;
 
@@ -266,7 +272,9 @@
 	=>
 	(assert (recommendation
 		(name "The Balm Meet Matte Hughes Commited")
-		(explanation "The Balm Meet Matte Hughes Commited"))))
+		(explanation
+			"Say hello to a truly loyal long-lasting liquid lipstick—Meet Matt(e) Hughes! Take your pick from eight dreamy shades—each as long-wearing and comfortable as the last. These matte, vanilla-mint liquid lipsticks are stuck on you without feeling clingy."
+		))))
 
 (defrule lipstick-liquid-matte-b-medium
 	(lipstick
@@ -277,7 +285,9 @@
 	=>
 	(assert (recommendation
 		(name "The Balm Meet Matte Hughes Charming")
-		(explanation "The Balm Meet Matte Hughes Charming"))))
+		(explanation 
+			"Say hello to a truly loyal long-lasting liquid lipstick—Meet Matt(e) Hughes! Take your pick from eight dreamy shades—each as long-wearing and comfortable as the last. These matte, vanilla-mint liquid lipsticks are stuck on you without feeling clingy."
+		))))
 
 (defrule lipstick-liquid-matte-b-dark
 	(lipstick
@@ -288,7 +298,9 @@
 	=>
 	(assert (recommendation
 		(name "The Balm Meet Matte Hughes Trustworthy")
-		(explanation "The Balm Meet Matte Hughes Trustworthy"))))
+		(explanation 
+			"Say hello to a truly loyal long-lasting liquid lipstick—Meet Matt(e) Hughes! Take your pick from eight dreamy shades—each as long-wearing and comfortable as the last. These matte, vanilla-mint liquid lipsticks are stuck on you without feeling clingy."
+		))))
 
 ;;;
 
@@ -301,7 +313,9 @@
 	=>
 	(assert (recommendation
 		(name "Girlactik Matte Lip Paint Blushing")
-		(explanation "Girlactik Matte Lip Paint Blushing"))))
+		(explanation
+			"You are the artist to your lips with Matte Lip Paint. Apply this richly pigmented lip paint and your lips are sure to look pout-full!! Did you know Girlactik gives the most product in a vial for matte lippies? You get 7.5ML…that’s more than double of most brands!"
+		))))
 
 (defrule lipstick-liquid-matte-c-medium
 	(lipstick
@@ -312,7 +326,9 @@
 	=>
 	(assert (recommendation
 		(name "Girlactik Matte Lip Paint Allure")
-		(explanation "Girlactik Matte Lip Paint Allure"))))
+		(explanation 
+			"You are the artist to your lips with Matte Lip Paint. Apply this richly pigmented lip paint and your lips are sure to look pout-full!! Did you know Girlactik gives the most product in a vial for matte lippies? You get 7.5ML…that’s more than double of most brands!"
+		))))
 
 (defrule lipstick-liquid-matte-c-dark
 	(lipstick
@@ -323,7 +339,9 @@
 	=>
 	(assert (recommendation
 		(name "Girlactik Matte Lip Paint Divine")
-		(explanation "Girlactik Matte Lip Paint Divine"))))
+		(explanation 
+			"You are the artist to your lips with Matte Lip Paint. Apply this richly pigmented lip paint and your lips are sure to look pout-full!! Did you know Girlactik gives the most product in a vial for matte lippies? You get 7.5ML…that’s more than double of most brands!"
+		))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -406,7 +424,9 @@
 	=>
 	(assert (recommendation
 		(name "Benefit Chachatint Cheek & Lip Stain")
-		(explanation "Benefit Chachatint Cheek & Lip Stain"))))
+		(explanation 
+			"This mango-tinted stain beautifully blushes lips & cheeks with a tropical coral hue. Our sheer stain has a natural finish that will leave you looking deliciously vibrant for hours."
+		))))
 
 (defrule lipstick-liquid-stain-c-medium
 	(lipstick
@@ -417,7 +437,9 @@
 	=>
 	(assert (recommendation
 		(name "Benefit Posietint Cheek & Lip Stain")
-		(explanation "Benefit Posietint Cheek & Lip Stain"))))
+		(explanation 
+			"This poppy-pink tinted stain brightens cheeks & lips with a cheery flush. The liquid-gel formula beautifully blends on all complexions and lasts for hours."
+		))))
 
 (defrule lipstick-liquid-stain-c-dark
 	(lipstick
@@ -428,7 +450,9 @@
 	=>
 	(assert (recommendation
 		(name "Benefit Benetint Cheek & Lip Stain")
-		(explanation "Benefit Benetint Cheek & Lip Stain"))))
+		(explanation 
+			"Our original rose-tinted stain is kiss-proof, see-through color for lips & cheeks that lasts for hours. Originally created for an exotic dancer in the 1970s, benetint has soared to cult fave status."
+		))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
