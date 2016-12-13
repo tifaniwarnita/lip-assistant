@@ -62,7 +62,7 @@
             <Component class="javax.swing.JLabel" name="Cat1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/lipassistantgui/assets/cat.png"/>
+                  <Image iconType="3" name="/lipassistant/assets/cat.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -154,7 +154,7 @@
             <Component class="javax.swing.JLabel" name="bg">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/lipassistantgui/assets/background.png"/>
+                  <Image iconType="3" name="/lipassistant/assets/background.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -292,7 +292,7 @@
             <Component class="javax.swing.JLabel" name="imgChoice3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/lipassistantgui/assets/liquid.png"/>
+                  <Image iconType="3" name="/lipassistant/assets/liquid.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -304,7 +304,7 @@
             <Component class="javax.swing.JLabel" name="imgChoice2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/lipassistantgui/assets/stick.png"/>
+                  <Image iconType="3" name="/lipassistant/assets/stick.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -316,7 +316,7 @@
             <Component class="javax.swing.JLabel" name="imgChoice1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/lipassistantgui/assets/stick.png"/>
+                  <Image iconType="3" name="/lipassistant/assets/stick.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -328,7 +328,7 @@
             <Component class="javax.swing.JLabel" name="bg2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/lipassistantgui/assets/background.png"/>
+                  <Image iconType="3" name="/lipassistant/assets/background.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -456,7 +456,7 @@
             <Component class="javax.swing.JLabel" name="bg1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/lipassistantgui/assets/background.png"/>
+                  <Image iconType="3" name="/lipassistant/assets/background.png"/>
                 </Property>
               </Properties>
               <Constraints>

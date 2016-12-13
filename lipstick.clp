@@ -521,8 +521,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name "Sephora Ultra Shine Lip Gel Lady Duck")
-		(explanation "Sephora Ultra Shine Lip Gel Lady Duck"))))
+		(name "Sephora Ultra Shine Lip Gel Lady Luck")
+		(explanation "Sephora Ultra Shine Lip Gel Lady Luck"))))
 
 ;;;
 
@@ -556,7 +556,7 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name "Anastasia Beverly Hills Lipgloss Sunset Tara")
+		(name "Anastasia Beverly Hills Lipgloss Tara")
 		(explanation "Anastasia Beverly Hills Lipgloss Tara"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lipassistantgui;
-
+package lipassistant;
+import jess.*;
 /**
  *
  * @author ASUS X202E
  */
-public class LipAssistantGUI {
-    private static QuizFrame quizFrame = new QuizFrame();
+public class LipAssistant {
+    static QuizController controller;
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        quizFrame.setVisible(true);
+    public static void main(String[] args) throws JessException {
+        controller = new QuizController();
+        controller.start();
     }
     
 }
