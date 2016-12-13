@@ -230,8 +230,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NYX Soft Matte Lip Color Stockholm")
+		(explanation "NYX Soft Matte Lip Color Stockholm"))))
 
 (defrule lipstick-liquid-matte-a-medium
 	(lipstick
@@ -241,8 +241,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NYX Soft Matte Lip Color Cannes")
+		(explanation "NYX Soft Matte Lip Color Cannes"))))
 
 (defrule lipstick-liquid-matte-a-dark
 	(lipstick
@@ -252,8 +252,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NYX Soft Matte Lip Color Rome")
+		(explanation "NYX Soft Matte Lip Color Rome"))))
 
 ;;;
 
@@ -265,8 +265,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "The Balm Meet Matte Hughes Commited")
+		(explanation "The Balm Meet Matte Hughes Commited"))))
 
 (defrule lipstick-liquid-matte-b-medium
 	(lipstick
@@ -276,8 +276,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "The Balm Meet Matte Hughes Charming")
+		(explanation "The Balm Meet Matte Hughes Charming"))))
 
 (defrule lipstick-liquid-matte-b-dark
 	(lipstick
@@ -287,8 +287,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "The Balm Meet Matte Hughes Trustworthy")
+		(explanation "The Balm Meet Matte Hughes Trustworthy"))))
 
 ;;;
 
@@ -300,8 +300,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Girlactik Matte Lip Paint Blushing")
+		(explanation "Girlactik Matte Lip Paint Blushing"))))
 
 (defrule lipstick-liquid-matte-c-medium
 	(lipstick
@@ -311,8 +311,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Girlactik Matte Lip Paint Allure")
+		(explanation "Girlactik Matte Lip Paint Allure"))))
 
 (defrule lipstick-liquid-matte-c-dark
 	(lipstick
@@ -322,8 +322,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Girlactik Matte Lip Paint Divine")
+		(explanation "Girlactik Matte Lip Paint Divine"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -335,8 +335,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Etude House Fresh Cherry Tint Orange")
+		(explanation "Etude House Fresh Cherry Tint Orange"))))
 
 (defrule lipstick-liquid-stain-a-medium
 	(lipstick
@@ -346,8 +346,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Etude House Fresh Cherry Tint Pink")
+		(explanation "Etude House Fresh Cherry Tint Pink"))))
 
 (defrule lipstick-liquid-stain-a-dark
 	(lipstick
@@ -357,8 +357,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Etude House Fresh Cherry Tint Red")
+		(explanation "Etude House Fresh Cherry Tint Red"))))
 
 ;;;
 
@@ -370,8 +370,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Body Shop Lip & Cheek Stain Dusty Rose")
+		(explanation "Body Shop Lip & Cheek Stain Dusty Rose"))))
 
 (defrule lipstick-liquid-stain-b-medium
 	(lipstick
@@ -381,8 +381,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Body Shop Lip & Cheek Stain Dark Cherry")
+		(explanation "Body Shop Lip & Cheek Stain Dark Cherry"))))
 
 (defrule lipstick-liquid-stain-b-dark
 	(lipstick
@@ -392,8 +392,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Body Shop Lip & Cheek Stain Deep Berry")
+		(explanation "Body Shop Lip & Cheek Stain Deep Berry"))))
 
 ;;;
 
@@ -405,8 +405,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Benefit Chachatint Cheek & Lip Stain")
+		(explanation "Benefit Chachatint Cheek & Lip Stain"))))
 
 (defrule lipstick-liquid-stain-c-medium
 	(lipstick
@@ -416,8 +416,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Benefit Posietint Cheek & Lip Stain")
+		(explanation "Benefit Posietint Cheek & Lip Stain"))))
 
 (defrule lipstick-liquid-stain-c-dark
 	(lipstick
@@ -427,8 +427,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Benefit Benetint Cheek & Lip Stain")
+		(explanation "Benefit Benetint Cheek & Lip Stain"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -440,8 +440,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NYX Butter Gloss Tiramisu")
+		(explanation "NYX Butter Gloss Tiramisu"))))
 
 (defrule lipstick-liquid-gloss-a-medium
 	(lipstick
@@ -451,8 +451,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NYX Butter Gloss Praline")
+		(explanation "NYX Butter Gloss Praline"))))
 
 (defrule lipstick-liquid-gloss-a-dark
 	(lipstick
@@ -462,8 +462,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NYX Butter Gloss Ginger Snap")
+		(explanation "NYX Butter Gloss Ginger Snap"))))
 
 ;;;
 
@@ -475,8 +475,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Sephora Ultra Shine Lip Gel Earth & Fire")
+		(explanation "Sephora Ultra Shine Lip Gel Earth & Fire"))))
 
 (defrule lipstick-liquid-gloss-b-medium
 	(lipstick
@@ -486,8 +486,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Sephora Ultra Shine Lip Gel Deep Rose")
+		(explanation "Sephora Ultra Shine Lip Gel Deep Rose"))))
 
 (defrule lipstick-liquid-gloss-b-dark
 	(lipstick
@@ -497,8 +497,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Sephora Ultra Shine Lip Gel Lady Duck")
+		(explanation "Sephora Ultra Shine Lip Gel Lady Duck"))))
 
 ;;;
 
@@ -510,8 +510,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Anastasia Beverly Hills Lipgloss Sunset Trip")
+		(explanation "Anastasia Beverly Hills Lipgloss Metallic Rose"))))
 
 (defrule lipstick-liquid-gloss-c-medium
 	(lipstick
@@ -521,8 +521,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Anastasia Beverly Hills Lipgloss Metallic Rose")
+		(explanation "Anastasia Beverly Hills Lipgloss Metallic Rose"))))
 
 (defrule lipstick-liquid-gloss-c-dark
 	(lipstick
@@ -532,8 +532,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Anastasia Beverly Hills Lipgloss Sunset Tara")
+		(explanation "Anastasia Beverly Hills Lipgloss Tara"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -545,8 +545,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "e.l.f Matte Lip Colour Natural")
+		(explanation "e.l.f Matte Lip Colour Natural"))))
 
 (defrule lipstick-stick-matte-a-medium
 	(lipstick
@@ -556,8 +556,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "e.l.f Matte Lip Colour Praline")
+		(explanation "e.l.f Matte Lip Colour Praline"))))
 
 (defrule lipstick-stick-matte-a-dark
 	(lipstick
@@ -567,8 +567,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "e.l.f Matte Lip Colour Cranberry")
+		(explanation "e.l.f Matte Lip Colour Cranberry"))))
 
 ;;;
 
@@ -580,8 +580,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Colourpop Lippie Stix Hype Girl")
+		(explanation "Colourpop Lippie Stix Hype Girl"))))
 
 (defrule lipstick-stick-matte-b-medium
 	(lipstick
@@ -591,8 +591,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Colourpop Lippie Stix Brink")
+		(explanation "Colourpop Lippie Stix Brink"))))
 
 (defrule lipstick-stick-matte-b-dark
 	(lipstick
@@ -602,8 +602,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Colourpop Lippie Stix Hype Daydream")
+		(explanation "Colourpop Lippie Stix Daydream"))))
 
 ;;;
 
@@ -650,8 +650,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Revlon Super Lustrous Creme Lipstick Ginger Rose")
+		(explanation "Revlon Super Lustrous Creme Lipstick Ginger Rose"))))
 
 (defrule lipstick-stick-satin-a-medium
 	(lipstick
@@ -661,8 +661,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Revlon Super Lustrous Creme Lipstick Rose Velvet")
+		(explanation "Revlon Super Lustrous Creme Lipstick Rose Velvet"))))
 
 (defrule lipstick-stick-satin-a-dark
 	(lipstick
@@ -672,8 +672,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Revlon Super Lustrous Creme Lipstick Rum Raisin")
+		(explanation "Revlon Super Lustrous Creme Lipstick Rum Raisin"))))
 
 ;;;
 
@@ -685,8 +685,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "L'Oreal Paris Color Riche Lipstick Beige A Nu")
+		(explanation "L'Oreal Paris Color Riche Lipstick Beige A Nu"))))
 
 (defrule lipstick-stick-satin-b-medium
 	(lipstick
@@ -696,8 +696,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "L'Oreal Paris Color Riche Lipstick Blushing Berry")
+		(explanation "L'Oreal Paris Color Riche Lipstick Blushing Berry"))))
 
 (defrule lipstick-stick-satin-b-dark
 	(lipstick
@@ -707,8 +707,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "L'Oreal Paris Color Riche Lipstick Spiced Cider")
+		(explanation "L'Oreal Paris Color Riche Lipstick Spiced Cider"))))
 
 ;;;
 
@@ -720,8 +720,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "MAC Satin Lipstick Faux")
+		(explanation "MAC Satin Lipstick Faux"))))
 
 (defrule lipstick-stick-satin-c-medium
 	(lipstick
@@ -731,8 +731,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "MAC Satin Lipstick Twig")
+		(explanation "MAC Satin Lipstick Twig"))))
 
 (defrule lipstick-stick-satin-c-dark
 	(lipstick
@@ -742,8 +742,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "MAC Satin Lipstick Del Rio")
+		(explanation "MAC Satin Lipstick Del Rio"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
