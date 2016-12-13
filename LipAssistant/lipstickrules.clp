@@ -354,7 +354,7 @@
 	=>
 	(assert (recommendation
 		(name "Etude House Fresh Cherry Tint Orange")
-		(explanation "Etude House Fresh Cherry Tint Orange"))))
+		(explanation "Tint promotes moist & shiny cherry lips with a creamy, smooth texture."))))
 
 (defrule lipstick-liquid-stain-a-medium
 	(lipstick
@@ -365,7 +365,7 @@
 	=>
 	(assert (recommendation
 		(name "Etude House Fresh Cherry Tint Pink")
-		(explanation "Etude House Fresh Cherry Tint Pink"))))
+		(explanation "Tint promotes moist & shiny cherry lips with a creamy, smooth texture."))))
 
 (defrule lipstick-liquid-stain-a-dark
 	(lipstick
@@ -376,7 +376,7 @@
 	=>
 	(assert (recommendation
 		(name "Etude House Fresh Cherry Tint Red")
-		(explanation "Etude House Fresh Cherry Tint Red"))))
+		(explanation "Tint promotes moist & shiny cherry lips with a creamy, smooth texture."))))
 
 ;;;
 
@@ -389,7 +389,7 @@
 	=>
 	(assert (recommendation
 		(name "Body Shop Lip & Cheek Stain Dusty Rose")
-		(explanation "Body Shop Lip & Cheek Stain Dusty Rose"))))
+		(explanation "This dual-purpose liquid stain gives lips and cheeks a natural pop of buildable colour. Use under lip gloss for a show-stopping-pout and dab onto cheeks for a natural-looking rosy glow."))))
 
 (defrule lipstick-liquid-stain-b-medium
 	(lipstick
@@ -400,7 +400,7 @@
 	=>
 	(assert (recommendation
 		(name "Body Shop Lip & Cheek Stain Dark Cherry")
-		(explanation "Body Shop Lip & Cheek Stain Dark Cherry"))))
+		(explanation "This dual-purpose liquid stain gives lips and cheeks a natural pop of buildable colour. Use under lip gloss for a show-stopping-pout and dab onto cheeks for a natural-looking rosy glow."))))
 
 (defrule lipstick-liquid-stain-b-dark
 	(lipstick
@@ -411,7 +411,7 @@
 	=>
 	(assert (recommendation
 		(name "Body Shop Lip & Cheek Stain Deep Berry")
-		(explanation "Body Shop Lip & Cheek Stain Deep Berry"))))
+		(explanation "This dual-purpose liquid stain gives lips and cheeks a natural pop of buildable colour. Use under lip gloss for a show-stopping-pout and dab onto cheeks for a natural-looking rosy glow."))))
 
 ;;;
 
@@ -465,7 +465,7 @@
 	=>
 	(assert (recommendation
 		(name "NYX Butter Gloss Tiramisu")
-		(explanation "NYX Butter Gloss Tiramisu"))))
+		(explanation "Buttery soft and silky smooth, our decadent Butter Gloss is now available in 12 more sumptuous shades! Each glossy color delivers sheer to medium coverage that melts onto your lips and is never sticky, leaving your lips soft, supple and kissable."))))
 
 (defrule lipstick-liquid-gloss-a-medium
 	(lipstick
@@ -476,7 +476,7 @@
 	=>
 	(assert (recommendation
 		(name "NYX Butter Gloss Praline")
-		(explanation "NYX Butter Gloss Praline"))))
+		(explanation "Buttery soft and silky smooth, our decadent Butter Gloss is now available in 12 more sumptuous shades! Each glossy color delivers sheer to medium coverage that melts onto your lips and is never sticky, leaving your lips soft, supple and kissable."))))
 
 (defrule lipstick-liquid-gloss-a-dark
 	(lipstick
@@ -487,7 +487,7 @@
 	=>
 	(assert (recommendation
 		(name "NYX Butter Gloss Ginger Snap")
-		(explanation "NYX Butter Gloss Ginger Snap"))))
+		(explanation "Buttery soft and silky smooth, our decadent Butter Gloss is now available in 12 more sumptuous shades! Each glossy color delivers sheer to medium coverage that melts onto your lips and is never sticky, leaving your lips soft, supple and kissable."))))
 
 ;;;
 
@@ -500,7 +500,7 @@
 	=>
 	(assert (recommendation
 		(name "Sephora Ultra Shine Lip Gel Earth & Fire")
-		(explanation "Sephora Ultra Shine Lip Gel Earth & Fire"))))
+		(explanation "A lip gloss with a light-reflecting plumped shine inspired by gel nail polishes. Ultra Shine Lip Gel transforms lips with a gel-effect formula for a light-reflecting, plumped shine. Its ultra-light, sensorial texture is also hydrating."))))
 
 (defrule lipstick-liquid-gloss-b-medium
 	(lipstick
@@ -511,7 +511,7 @@
 	=>
 	(assert (recommendation
 		(name "Sephora Ultra Shine Lip Gel Deep Rose")
-		(explanation "Sephora Ultra Shine Lip Gel Deep Rose"))))
+		(explanation "A lip gloss with a light-reflecting plumped shine inspired by gel nail polishes. Ultra Shine Lip Gel transforms lips with a gel-effect formula for a light-reflecting, plumped shine. Its ultra-light, sensorial texture is also hydrating."))))
 
 (defrule lipstick-liquid-gloss-b-dark
 	(lipstick
@@ -522,7 +522,7 @@
 	=>
 	(assert (recommendation
 		(name "Sephora Ultra Shine Lip Gel Lady Duck")
-		(explanation "Sephora Ultra Shine Lip Gel Lady Duck"))))
+		(explanation "A lip gloss with a light-reflecting plumped shine inspired by gel nail polishes. Ultra Shine Lip Gel transforms lips with a gel-effect formula for a light-reflecting, plumped shine. Its ultra-light, sensorial texture is also hydrating."))))
 
 ;;;
 
@@ -535,7 +535,7 @@
 	=>
 	(assert (recommendation
 		(name "Anastasia Beverly Hills Lipgloss Sunset Trip")
-		(explanation "Anastasia Beverly Hills Lipgloss Metallic Rose"))))
+		(explanation "An opaque, high-shine lip color. Use Anastasia Beverly Hills Lip Gloss’ flat sponge-tip applicator to deliver intense pigment with precision for an expert finish in a single swipe. Can be worn alone or layered over lipstick, non-drying formula, vanilla scent, and available in 43 shades."))))
 
 (defrule lipstick-liquid-gloss-c-medium
 	(lipstick
@@ -546,7 +546,7 @@
 	=>
 	(assert (recommendation
 		(name "Anastasia Beverly Hills Lipgloss Metallic Rose")
-		(explanation "Anastasia Beverly Hills Lipgloss Metallic Rose"))))
+		(explanation "An opaque, high-shine lip color. Use Anastasia Beverly Hills Lip Gloss’ flat sponge-tip applicator to deliver intense pigment with precision for an expert finish in a single swipe. Can be worn alone or layered over lipstick, non-drying formula, vanilla scent, and available in 43 shades."))))
 
 (defrule lipstick-liquid-gloss-c-dark
 	(lipstick
@@ -557,7 +557,7 @@
 	=>
 	(assert (recommendation
 		(name "Anastasia Beverly Hills Lipgloss Sunset Tara")
-		(explanation "Anastasia Beverly Hills Lipgloss Tara"))))
+		(explanation "An opaque, high-shine lip color. Use Anastasia Beverly Hills Lip Gloss’ flat sponge-tip applicator to deliver intense pigment with precision for an expert finish in a single swipe. Can be worn alone or layered over lipstick, non-drying formula, vanilla scent, and available in 43 shades."))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -570,7 +570,7 @@
 	=>
 	(assert (recommendation
 		(name "e.l.f Matte Lip Colour Natural")
-		(explanation "e.l.f Matte Lip Colour Natural"))))
+		(explanation "This convenient jumbo sized lip pencil creates exact color application with twist up ease so you never have to sharpen. The pigment rich color glides on effortlessly and easily to provide long lasting matte color. The enriched Vitamin A, C & E formula moisturizes and hydrates lips for beautiful healthy looking lips."))))
 
 (defrule lipstick-stick-matte-a-medium
 	(lipstick
@@ -581,7 +581,7 @@
 	=>
 	(assert (recommendation
 		(name "e.l.f Matte Lip Colour Praline")
-		(explanation "e.l.f Matte Lip Colour Praline"))))
+		(explanation "This convenient jumbo sized lip pencil creates exact color application with twist up ease so you never have to sharpen. The pigment rich color glides on effortlessly and easily to provide long lasting matte color. The enriched Vitamin A, C & E formula moisturizes and hydrates lips for beautiful healthy looking lips."))))
 
 (defrule lipstick-stick-matte-a-dark
 	(lipstick
@@ -592,7 +592,7 @@
 	=>
 	(assert (recommendation
 		(name "e.l.f Matte Lip Colour Cranberry")
-		(explanation "e.l.f Matte Lip Colour Cranberry"))))
+		(explanation "This convenient jumbo sized lip pencil creates exact color application with twist up ease so you never have to sharpen. The pigment rich color glides on effortlessly and easily to provide long lasting matte color. The enriched Vitamin A, C & E formula moisturizes and hydrates lips for beautiful healthy looking lips."))))
 
 ;;;
 
@@ -605,7 +605,7 @@
 	=>
 	(assert (recommendation
 		(name "Colourpop Lippie Stix Hype Girl")
-		(explanation "Colourpop Lippie Stix Hype Girl"))))
+		(explanation "You’ll be the ultimate turn up girl in this soft coral nude in a matte finish."))))
 
 (defrule lipstick-stick-matte-b-medium
 	(lipstick
@@ -616,7 +616,7 @@
 	=>
 	(assert (recommendation
 		(name "Colourpop Lippie Stix Brink")
-		(explanation "Colourpop Lippie Stix Brink"))))
+		(explanation "A warm dusty taupe in a matte finish. Curated by @brittanysuleiman. Inspired by the insta-famous Kylie lip"))))
 
 (defrule lipstick-stick-matte-b-dark
 	(lipstick
@@ -627,7 +627,7 @@
 	=>
 	(assert (recommendation
 		(name "Colourpop Lippie Stix Hype Daydream")
-		(explanation "Colourpop Lippie Stix Daydream"))))
+		(explanation "Matte X finish toned plummy brown"))))
 
 ;;;
 
@@ -675,7 +675,7 @@
 	=>
 	(assert (recommendation
 		(name "Revlon Super Lustrous Creme Lipstick Ginger Rose")
-		(explanation "Revlon Super Lustrous Creme Lipstick Ginger Rose"))))
+		(explanation "For seven decades, women everywhere have indulged in the bold, luxurious shades of our most iconic lipstick. Super Lustrous™ creates unforgettably seductive lip color in four finishes — crème, matte, pearl, and sheer — and is available in 82 vibrant shades. The legacy lives on. "))))
 
 (defrule lipstick-stick-satin-a-medium
 	(lipstick
@@ -686,7 +686,7 @@
 	=>
 	(assert (recommendation
 		(name "Revlon Super Lustrous Creme Lipstick Rose Velvet")
-		(explanation "Revlon Super Lustrous Creme Lipstick Rose Velvet"))))
+		(explanation "For seven decades, women everywhere have indulged in the bold, luxurious shades of our most iconic lipstick. Super Lustrous™ creates unforgettably seductive lip color in four finishes — crème, matte, pearl, and sheer — and is available in 82 vibrant shades. The legacy lives on. "))))
 
 (defrule lipstick-stick-satin-a-dark
 	(lipstick
@@ -697,7 +697,7 @@
 	=>
 	(assert (recommendation
 		(name "Revlon Super Lustrous Creme Lipstick Rum Raisin")
-		(explanation "Revlon Super Lustrous Creme Lipstick Rum Raisin"))))
+		(explanation "For seven decades, women everywhere have indulged in the bold, luxurious shades of our most iconic lipstick. Super Lustrous™ creates unforgettably seductive lip color in four finishes — crème, matte, pearl, and sheer — and is available in 82 vibrant shades. The legacy lives on. "))))
 
 ;;;
 
@@ -710,7 +710,7 @@
 	=>
 	(assert (recommendation
 		(name "L'Oreal Paris Color Riche Lipstick Beige A Nu")
-		(explanation "L'Oreal Paris Color Riche Lipstick Beige A Nu"))))
+		(explanation "Dress your lips in sumptuous colour with Color Riche lipstick. Indulge in either a creamy matte or a lacquer finish."))))
 
 (defrule lipstick-stick-satin-b-medium
 	(lipstick
@@ -721,7 +721,7 @@
 	=>
 	(assert (recommendation
 		(name "L'Oreal Paris Color Riche Lipstick Blushing Berry")
-		(explanation "L'Oreal Paris Color Riche Lipstick Blushing Berry"))))
+		(explanation "Dress your lips in sumptuous colour with Color Riche lipstick. Indulge in either a creamy matte or a lacquer finish."))))
 
 (defrule lipstick-stick-satin-b-dark
 	(lipstick
@@ -732,7 +732,7 @@
 	=>
 	(assert (recommendation
 		(name "L'Oreal Paris Color Riche Lipstick Spiced Cider")
-		(explanation "L'Oreal Paris Color Riche Lipstick Spiced Cider"))))
+		(explanation "Dress your lips in sumptuous colour with Color Riche lipstick. Indulge in either a creamy matte or a lacquer finish."))))
 
 ;;;
 
@@ -745,7 +745,7 @@
 	=>
 	(assert (recommendation
 		(name "MAC Satin Lipstick Faux")
-		(explanation "MAC Satin Lipstick Faux"))))
+		(explanation "A lipstick with hundreds of hues. The iconic product that made M·A·C famous."))))
 
 (defrule lipstick-stick-satin-c-medium
 	(lipstick
@@ -756,7 +756,7 @@
 	=>
 	(assert (recommendation
 		(name "MAC Satin Lipstick Twig")
-		(explanation "MAC Satin Lipstick Twig"))))
+		(explanation "A lipstick with hundreds of hues. The iconic product that made M·A·C famous."))))
 
 (defrule lipstick-stick-satin-c-dark
 	(lipstick
@@ -767,7 +767,7 @@
 	=>
 	(assert (recommendation
 		(name "MAC Satin Lipstick Del Rio")
-		(explanation "MAC Satin Lipstick Del Rio"))))
+		(explanation "A lipstick with hundreds of hues. The iconic product that made M·A·C famous."))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
