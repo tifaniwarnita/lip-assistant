@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lipassistantgui;
+package lipassistant;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -40,17 +40,19 @@ import jess.ValueVector;
 public class QuizFrame extends javax.swing.JFrame {
     Rete engine = new Rete();
     Fact fact;
-    
+
     
     private int currentQuestion = 0;
+    
     /**
      * Creates new form GameFrame
      */
     public QuizFrame() throws JessException {
         engine.clear();
         engine.reset();
-        engine.batch("C:/Users/jessica/Documents/GitHub/lip-assistant/LipAssistantGUI/lipstickrules.clp");
+        engine.batch("lipstickrules.clp");
         fact = new Fact("lipstick", engine);
+
         initComponents();
 //        ImageIcon img = new ImageIcon(getClass().getResource("/werewolvesinwonderland/client/assets/icon_werewolf.png"));
 //        this.setIconImage(img.getImage());
@@ -101,7 +103,7 @@ public class QuizFrame extends javax.swing.JFrame {
         homePanel.setPreferredSize(new java.awt.Dimension(960, 641));
         homePanel.setLayout(null);
 
-        Cat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/cat.png"))); // NOI18N
+        Cat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/cat.png"))); // NOI18N
         homePanel.add(Cat1);
         Cat1.setBounds(650, 250, 190, 330);
 
@@ -143,7 +145,7 @@ public class QuizFrame extends javax.swing.JFrame {
         homePanel.add(btnStart);
         btnStart.setBounds(130, 460, 210, 80);
 
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/background.png"))); // NOI18N
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/background.png"))); // NOI18N
         homePanel.add(bg);
         bg.setBounds(0, 0, 960, 641);
 
@@ -218,19 +220,19 @@ public class QuizFrame extends javax.swing.JFrame {
         quizPanel.add(btnChoice1);
         btnChoice1.setBounds(110, 290, 200, 70);
 
-        imgChoice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/liquid.png"))); // NOI18N
+        imgChoice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/liquid.png"))); // NOI18N
         quizPanel.add(imgChoice3);
         imgChoice3.setBounds(650, 380, 200, 200);
 
-        imgChoice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/stick.png"))); // NOI18N
+        imgChoice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/stick.png"))); // NOI18N
         quizPanel.add(imgChoice2);
         imgChoice2.setBounds(390, 380, 200, 200);
 
-        imgChoice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/stick.png"))); // NOI18N
+        imgChoice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/stick.png"))); // NOI18N
         quizPanel.add(imgChoice1);
         imgChoice1.setBounds(110, 380, 200, 200);
 
-        bg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/background.png"))); // NOI18N
+        bg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/background.png"))); // NOI18N
         quizPanel.add(bg2);
         bg2.setBounds(0, 0, 960, 641);
 
@@ -289,7 +291,7 @@ public class QuizFrame extends javax.swing.JFrame {
         resultPanel.add(jScrollPane1);
         jScrollPane1.setBounds(130, 320, 700, 130);
 
-        bg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/background.png"))); // NOI18N
+        bg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/background.png"))); // NOI18N
         resultPanel.add(bg1);
         bg1.setBounds(0, 0, 960, 641);
 
@@ -408,6 +410,7 @@ public class QuizFrame extends javax.swing.JFrame {
     private void proceedQuiz(String answer) throws JessException {
         System.out.println(answer);
         if (currentQuestion==1) {
+            //pref.setShape(answer);
             lblQuestion.setText("Which texture do you prefer?");
             if (answer.equals("Stick")) {
                 fact.setSlotValue("shape", new Value("stick", RU.STRING));
@@ -480,11 +483,11 @@ public class QuizFrame extends javax.swing.JFrame {
     
     private void changeImageChoice(int no, String image) {
         if (no==1) {
-            imgChoice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/"+image+".png")));
+            imgChoice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/"+image+".png")));
         } else if (no==2) {
-            imgChoice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/"+image+".png")));
+            imgChoice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/"+image+".png")));
         } else if (no==3) {
-            imgChoice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistantgui/assets/"+image+".png")));
+            imgChoice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lipassistant/assets/"+image+".png")));
         }
     }
     

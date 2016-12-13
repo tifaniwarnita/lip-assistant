@@ -60,7 +60,7 @@
 	else (if (eq ?type texture-liquid-answer) then
 		(return (or (eq ?answer matte) (eq ?answer stain) (eq ?answer gloss)))
 	else (if (eq ?type texture-stick-answer) then
-		(return (or (eq ?answer matte) (eq ?answer sheer) (eq ?answer satin)))
+		(return (or (eq ?answer matte) (eq ?answer sheer) (eq ?answer creamy/satin)))
 	else (if (eq ?type price-answer) then
 		(return (or (eq ?answer a) (eq ?answer b) (eq ?answer c)))
 	else (if (eq ?type skintone-answer) then
@@ -79,7 +79,7 @@
 		else (if (eq ?type texture-liquid-answer) then
 			(printout t "(matte/stain/gloss) ")
 		else (if (eq ?type texture-stick-answer) then
-			(printout t "(matte/sheer/satin) ")
+			(printout t "(matte/sheer/creamy/satin) ")
 		else (if (eq ?type price-answer) then
 			(printout t "(a/b/c) " crlf)
 			(printout t "a. <Rp100.000" crlf)
@@ -193,7 +193,7 @@
 	(assert (ask skintone)))
 
 (defrule assert-interview-fact-1
-	(answer (ident shape) (text ?sh&:(eq ?sh liquid)))
+	(answer (ident shape) (text "liquid"))
 	(answer (ident texture-liquid) (text ?tx))
 	(answer (ident price) (text ?pr))
 	(answer (ident skintone) (text ?sk))
@@ -205,7 +205,7 @@
 		(skintone ?sk))))
 
 (defrule assert-interview-fact-2
-	(answer (ident shape) (text ?sh&:(eq ?sh stick)))
+	(answer (ident shape) (text "stick"))
 	(answer (ident texture-stick) (text ?tx))
 	(answer (ident price) (text ?pr))
 	(answer (ident skintone) (text ?sk))
@@ -224,10 +224,10 @@
 
 (defrule lipstick-liquid-matte-a-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "matte")
+		(price "a")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "NYX Soft Matte Lip Color Stockholm")
@@ -237,10 +237,10 @@
 
 (defrule lipstick-liquid-matte-a-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "matte")
+		(price "a")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "NYX Soft Matte Lip Color Cannes")
@@ -250,10 +250,10 @@
 
 (defrule lipstick-liquid-matte-a-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "matte")
+		(price "a")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "NYX Soft Matte Lip Color Rome")
@@ -265,10 +265,10 @@
 
 (defrule lipstick-liquid-matte-b-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "matte")
+		(price "b")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "The Balm Meet Matte Hughes Commited")
@@ -278,10 +278,10 @@
 
 (defrule lipstick-liquid-matte-b-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "matte")
+		(price "b")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "The Balm Meet Matte Hughes Charming")
@@ -291,10 +291,10 @@
 
 (defrule lipstick-liquid-matte-b-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "matte")
+		(price "b")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "The Balm Meet Matte Hughes Trustworthy")
@@ -306,10 +306,10 @@
 
 (defrule lipstick-liquid-matte-c-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "matte")
+		(price "c")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Girlactik Matte Lip Paint Blushing")
@@ -319,10 +319,10 @@
 
 (defrule lipstick-liquid-matte-c-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "matte")
+		(price "c")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Girlactik Matte Lip Paint Allure")
@@ -332,10 +332,10 @@
 
 (defrule lipstick-liquid-matte-c-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "matte")
+		(price "c")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "Girlactik Matte Lip Paint Divine")
@@ -347,80 +347,80 @@
 
 (defrule lipstick-liquid-stain-a-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "stain")
+		(price "a")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Etude House Fresh Cherry Tint Orange")
-		(explanation "Tint promotes moist & shiny cherry lips with a creamy, smooth texture."))))
+		(explanation "Etude House Fresh Cherry Tint Orange"))))
 
 (defrule lipstick-liquid-stain-a-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "stain")
+		(price "a")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Etude House Fresh Cherry Tint Pink")
-		(explanation "Tint promotes moist & shiny cherry lips with a creamy, smooth texture."))))
+		(explanation "Etude House Fresh Cherry Tint Pink"))))
 
 (defrule lipstick-liquid-stain-a-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "stain")
+		(price "a")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "Etude House Fresh Cherry Tint Red")
-		(explanation "Tint promotes moist & shiny cherry lips with a creamy, smooth texture."))))
+		(explanation "Etude House Fresh Cherry Tint Red"))))
 
 ;;;
 
 (defrule lipstick-liquid-stain-b-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "stain")
+		(price "b")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Body Shop Lip & Cheek Stain Dusty Rose")
-		(explanation "This dual-purpose liquid stain gives lips and cheeks a natural pop of buildable colour. Use under lip gloss for a show-stopping-pout and dab onto cheeks for a natural-looking rosy glow."))))
+		(explanation "Body Shop Lip & Cheek Stain Dusty Rose"))))
 
 (defrule lipstick-liquid-stain-b-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "stain")
+		(price "b")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Body Shop Lip & Cheek Stain Dark Cherry")
-		(explanation "This dual-purpose liquid stain gives lips and cheeks a natural pop of buildable colour. Use under lip gloss for a show-stopping-pout and dab onto cheeks for a natural-looking rosy glow."))))
+		(explanation "Body Shop Lip & Cheek Stain Dark Cherry"))))
 
 (defrule lipstick-liquid-stain-b-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "stain")
+		(price "b")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "Body Shop Lip & Cheek Stain Deep Berry")
-		(explanation "This dual-purpose liquid stain gives lips and cheeks a natural pop of buildable colour. Use under lip gloss for a show-stopping-pout and dab onto cheeks for a natural-looking rosy glow."))))
+		(explanation "Body Shop Lip & Cheek Stain Deep Berry"))))
 
 ;;;
 
 (defrule lipstick-liquid-stain-c-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "stain")
+		(price "c")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Benefit Chachatint Cheek & Lip Stain")
@@ -430,10 +430,10 @@
 
 (defrule lipstick-liquid-stain-c-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "stain")
+		(price "c")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Benefit Posietint Cheek & Lip Stain")
@@ -443,10 +443,10 @@
 
 (defrule lipstick-liquid-stain-c-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx stain))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "stain")
+		(price "c")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "Benefit Benetint Cheek & Lip Stain")
@@ -458,185 +458,185 @@
 
 (defrule lipstick-liquid-gloss-a-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "a")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "NYX Butter Gloss Tiramisu")
-		(explanation "Buttery soft and silky smooth, our decadent Butter Gloss is now available in 12 more sumptuous shades! Each glossy color delivers sheer to medium coverage that melts onto your lips and is never sticky, leaving your lips soft, supple and kissable."))))
+		(explanation "NYX Butter Gloss Tiramisu"))))
 
 (defrule lipstick-liquid-gloss-a-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "a")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "NYX Butter Gloss Praline")
-		(explanation "Buttery soft and silky smooth, our decadent Butter Gloss is now available in 12 more sumptuous shades! Each glossy color delivers sheer to medium coverage that melts onto your lips and is never sticky, leaving your lips soft, supple and kissable."))))
+		(explanation "NYX Butter Gloss Praline"))))
 
 (defrule lipstick-liquid-gloss-a-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "a")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "NYX Butter Gloss Ginger Snap")
-		(explanation "Buttery soft and silky smooth, our decadent Butter Gloss is now available in 12 more sumptuous shades! Each glossy color delivers sheer to medium coverage that melts onto your lips and is never sticky, leaving your lips soft, supple and kissable."))))
+		(explanation "NYX Butter Gloss Ginger Snap"))))
 
 ;;;
 
 (defrule lipstick-liquid-gloss-b-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "b")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Sephora Ultra Shine Lip Gel Earth & Fire")
-		(explanation "A lip gloss with a light-reflecting plumped shine inspired by gel nail polishes. Ultra Shine Lip Gel transforms lips with a gel-effect formula for a light-reflecting, plumped shine. Its ultra-light, sensorial texture is also hydrating."))))
+		(explanation "Sephora Ultra Shine Lip Gel Earth & Fire"))))
 
 (defrule lipstick-liquid-gloss-b-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "b")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Sephora Ultra Shine Lip Gel Deep Rose")
-		(explanation "A lip gloss with a light-reflecting plumped shine inspired by gel nail polishes. Ultra Shine Lip Gel transforms lips with a gel-effect formula for a light-reflecting, plumped shine. Its ultra-light, sensorial texture is also hydrating."))))
+		(explanation "Sephora Ultra Shine Lip Gel Deep Rose"))))
 
 (defrule lipstick-liquid-gloss-b-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "b")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
-		(name "Sephora Ultra Shine Lip Gel Lady Luck")
-		(explanation "A lip gloss with a light-reflecting plumped shine inspired by gel nail polishes. Ultra Shine Lip Gel transforms lips with a gel-effect formula for a light-reflecting, plumped shine. Its ultra-light, sensorial texture is also hydrating."))))
+		(name "Sephora Ultra Shine Lip Gel Lady Duck")
+		(explanation "Sephora Ultra Shine Lip Gel Lady Duck"))))
 
 ;;;
 
 (defrule lipstick-liquid-gloss-c-light
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "c")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Anastasia Beverly Hills Lipgloss Sunset Trip")
-		(explanation "An opaque, high-shine lip color. Use Anastasia Beverly Hills Lip Gloss’ flat sponge-tip applicator to deliver intense pigment with precision for an expert finish in a single swipe. Can be worn alone or layered over lipstick, non-drying formula, vanilla scent, and available in 43 shades."))))
+		(explanation "Anastasia Beverly Hills Lipgloss Metallic Rose"))))
 
 (defrule lipstick-liquid-gloss-c-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "c")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Anastasia Beverly Hills Lipgloss Metallic Rose")
-		(explanation "An opaque, high-shine lip color. Use Anastasia Beverly Hills Lip Gloss’ flat sponge-tip applicator to deliver intense pigment with precision for an expert finish in a single swipe. Can be worn alone or layered over lipstick, non-drying formula, vanilla scent, and available in 43 shades."))))
+		(explanation "Anastasia Beverly Hills Lipgloss Metallic Rose"))))
 
 (defrule lipstick-liquid-gloss-c-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh liquid))
-		(texture ?tx&:(eq ?tx gloss))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "liquid")
+		(texture "gloss")
+		(price "c")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
-		(name "Anastasia Beverly Hills Lipgloss Tara")
-		(explanation "An opaque, high-shine lip color. Use Anastasia Beverly Hills Lip Gloss’ flat sponge-tip applicator to deliver intense pigment with precision for an expert finish in a single swipe. Can be worn alone or layered over lipstick, non-drying formula, vanilla scent, and available in 43 shades."))))
+		(name "Anastasia Beverly Hills Lipgloss Sunset Tara")
+		(explanation "Anastasia Beverly Hills Lipgloss Tara"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrule lipstick-stick-matte-a-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "matte")
+		(price "a")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "e.l.f Matte Lip Colour Natural")
-		(explanation "This convenient jumbo sized lip pencil creates exact color application with twist up ease so you never have to sharpen. The pigment rich color glides on effortlessly and easily to provide long lasting matte color. The enriched Vitamin A, C & E formula moisturizes and hydrates lips for beautiful healthy looking lips."))))
+		(explanation "e.l.f Matte Lip Colour Natural"))))
 
 (defrule lipstick-stick-matte-a-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "matte")
+		(price "a")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "e.l.f Matte Lip Colour Praline")
-		(explanation "This convenient jumbo sized lip pencil creates exact color application with twist up ease so you never have to sharpen. The pigment rich color glides on effortlessly and easily to provide long lasting matte color. The enriched Vitamin A, C & E formula moisturizes and hydrates lips for beautiful healthy looking lips."))))
+		(explanation "e.l.f Matte Lip Colour Praline"))))
 
 (defrule lipstick-stick-matte-a-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "matte")
+		(price "a")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "e.l.f Matte Lip Colour Cranberry")
-		(explanation "This convenient jumbo sized lip pencil creates exact color application with twist up ease so you never have to sharpen. The pigment rich color glides on effortlessly and easily to provide long lasting matte color. The enriched Vitamin A, C & E formula moisturizes and hydrates lips for beautiful healthy looking lips."))))
+		(explanation "e.l.f Matte Lip Colour Cranberry"))))
 
 ;;;
 
 (defrule lipstick-stick-matte-b-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "matte")
+		(price "b")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Colourpop Lippie Stix Hype Girl")
-		(explanation "You’ll be the ultimate turn up girl in this soft coral nude in a matte finish."))))
+		(explanation "Colourpop Lippie Stix Hype Girl"))))
 
 (defrule lipstick-stick-matte-b-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "matte")
+		(price "b")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Colourpop Lippie Stix Brink")
-		(explanation "A warm dusty taupe in a matte finish. Curated by @brittanysuleiman. Inspired by the insta-famous Kylie lip"))))
+		(explanation "Colourpop Lippie Stix Brink"))))
 
 (defrule lipstick-stick-matte-b-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "matte")
+		(price "b")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "Colourpop Lippie Stix Hype Daydream")
-		(explanation "Matte X finish toned plummy brown"))))
+		(explanation "Colourpop Lippie Stix Daydream"))))
 
 ;;;
 
 (defrule lipstick-stick-matte-c-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "matte")
+		(price "c")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -644,10 +644,10 @@
 
 (defrule lipstick-stick-matte-c-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "matte")
+		(price "c")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -655,10 +655,10 @@
 
 (defrule lipstick-stick-matte-c-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx matte))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "matte")
+		(price "c")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -668,115 +668,115 @@
 
 (defrule lipstick-stick-satin-a-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "a")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "Revlon Super Lustrous Creme Lipstick Ginger Rose")
-		(explanation "For seven decades, women everywhere have indulged in the bold, luxurious shades of our most iconic lipstick. Super Lustrous™ creates unforgettably seductive lip color in four finishes — crème, matte, pearl, and sheer — and is available in 82 vibrant shades. The legacy lives on. "))))
+		(explanation "Revlon Super Lustrous Creme Lipstick Ginger Rose"))))
 
 (defrule lipstick-stick-satin-a-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "a")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "Revlon Super Lustrous Creme Lipstick Rose Velvet")
-		(explanation "For seven decades, women everywhere have indulged in the bold, luxurious shades of our most iconic lipstick. Super Lustrous™ creates unforgettably seductive lip color in four finishes — crème, matte, pearl, and sheer — and is available in 82 vibrant shades. The legacy lives on. "))))
+		(explanation "Revlon Super Lustrous Creme Lipstick Rose Velvet"))))
 
 (defrule lipstick-stick-satin-a-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "a")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "Revlon Super Lustrous Creme Lipstick Rum Raisin")
-		(explanation "For seven decades, women everywhere have indulged in the bold, luxurious shades of our most iconic lipstick. Super Lustrous™ creates unforgettably seductive lip color in four finishes — crème, matte, pearl, and sheer — and is available in 82 vibrant shades. The legacy lives on. "))))
+		(explanation "Revlon Super Lustrous Creme Lipstick Rum Raisin"))))
 
 ;;;
 
 (defrule lipstick-stick-satin-b-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "b")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "L'Oreal Paris Color Riche Lipstick Beige A Nu")
-		(explanation "Dress your lips in sumptuous colour with Color Riche lipstick. Indulge in either a creamy matte or a lacquer finish."))))
+		(explanation "L'Oreal Paris Color Riche Lipstick Beige A Nu"))))
 
 (defrule lipstick-stick-satin-b-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "b")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "L'Oreal Paris Color Riche Lipstick Blushing Berry")
-		(explanation "Dress your lips in sumptuous colour with Color Riche lipstick. Indulge in either a creamy matte or a lacquer finish."))))
+		(explanation "L'Oreal Paris Color Riche Lipstick Blushing Berry"))))
 
 (defrule lipstick-stick-satin-b-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "b")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "L'Oreal Paris Color Riche Lipstick Spiced Cider")
-		(explanation "Dress your lips in sumptuous colour with Color Riche lipstick. Indulge in either a creamy matte or a lacquer finish."))))
+		(explanation "L'Oreal Paris Color Riche Lipstick Spiced Cider"))))
 
 ;;;
 
 (defrule lipstick-stick-satin-c-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "c")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name "MAC Satin Lipstick Faux")
-		(explanation "A lipstick with hundreds of hues. The iconic product that made M·A·C famous."))))
+		(explanation "MAC Satin Lipstick Faux"))))
 
 (defrule lipstick-stick-satin-c-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "c")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name "MAC Satin Lipstick Twig")
-		(explanation "A lipstick with hundreds of hues. The iconic product that made M·A·C famous."))))
+		(explanation "MAC Satin Lipstick Twig"))))
 
 (defrule lipstick-stick-satin-c-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx satin))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "creamy/satin")
+		(price "c")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name "MAC Satin Lipstick Del Rio")
-		(explanation "A lipstick with hundreds of hues. The iconic product that made M·A·C famous."))))
+		(explanation "MAC Satin Lipstick Del Rio"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrule lipstick-stick-sheer-a-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "sheer")
+		(price "a")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -784,10 +784,10 @@
 
 (defrule lipstick-stick-sheer-a-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "sheer")
+		(price "a")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -795,10 +795,10 @@
 
 (defrule lipstick-stick-sheer-a-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "sheer")
+		(price "a")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -808,10 +808,10 @@
 
 (defrule lipstick-stick-sheer-b-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "sheer")
+		(price "b")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -819,10 +819,10 @@
 
 (defrule lipstick-stick-sheer-b-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "sheer")
+		(price "b")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -830,10 +830,10 @@
 
 (defrule lipstick-stick-sheer-b-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr b))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "sheer")
+		(price "b")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -843,10 +843,10 @@
 
 (defrule lipstick-stick-sheer-c-light
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk light)))
+		(shape "stick")
+		(texture "sheer")
+		(price "c")
+		(skintone "light"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -854,10 +854,10 @@
 
 (defrule lipstick-stick-sheer-c-medium
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk medium)))
+		(shape "stick")
+		(texture "sheer")
+		(price "c")
+		(skintone "medium"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
@@ -865,37 +865,16 @@
 
 (defrule lipstick-stick-sheer-c-dark
 	(lipstick
-		(shape ?sh&:(eq ?sh stick))
-		(texture ?tx&:(eq ?tx sheer))
-		(price ?pr&:(eq ?pr c))
-		(skintone ?sk&:(eq ?sk dark)))
+		(shape "stick")
+		(texture "sheer")
+		(price "c")
+		(skintone "dark"))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
 		(explanation "Cocok kerja di air"))))
 
+
 ;;;*************************
 ;;;* LIPSTICK RULE: REPORT *
 ;;;*************************
-
-(defmodule report)
-
-(defrule sort-and-print
-	?r1 <- (recommendation
-		(name ?f1)
-		(explanation ?e))
-	(not (recommendation
-		(name ?f2&
-	:(< (str-compare ?f2 ?f1) 0))))
-	=>
-	(printout t "*** The most suitable lipstick for you is " ?f1 crlf)
-	(printout t "Explanation: " ?e crlf crlf)
-	(retract ?r1))
-
-(deffunction run-system ()
-	(reset)
-	(focus startup interview recommend report)
-	(run))
-
-(while TRUE
-	(run-system))
