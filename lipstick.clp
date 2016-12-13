@@ -639,8 +639,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Stila Matte'ificent Lipstick Jolie")
+		(explanation "Master the matte lip look with this must-have lipstick. Formulated with the perfect balance of concentrated matte pigments and oils, this lasting lip color creates a smooth, weightless, creamy matte finish that’s never heavy or dry. Infused with nourishing argon oil, castor oil, and vitamin E, it offers non-drying and vibrant, cushion-comfort coverage and one-swipe color."))))
 
 (defrule lipstick-stick-matte-c-medium
 	(lipstick
@@ -650,8 +650,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Stila Matte'ificent Lipstick Mon Ami")
+		(explanation "Master the matte lip look with this must-have lipstick. Formulated with the perfect balance of concentrated matte pigments and oils, this lasting lip color creates a smooth, weightless, creamy matte finish that’s never heavy or dry. Infused with nourishing argon oil, castor oil, and vitamin E, it offers non-drying and vibrant, cushion-comfort coverage and one-swipe color."))))
 
 (defrule lipstick-stick-matte-c-dark
 	(lipstick
@@ -661,8 +661,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Stila Matte'ificent Lipstick Brulee")
+		(explanation "Master the matte lip look with this must-have lipstick. Formulated with the perfect balance of concentrated matte pigments and oils, this lasting lip color creates a smooth, weightless, creamy matte finish that’s never heavy or dry. Infused with nourishing argon oil, castor oil, and vitamin E, it offers non-drying and vibrant, cushion-comfort coverage and one-swipe color."))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -779,8 +779,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+			(name "Revlon Colorburst Lip Butter Peach Parfait")
+			(explanation "Buttery balm with beautiful shiny colour to give you baby soft, healthy glowing lips - 94% of women felt lips were softer, smoother, and instantly hydrated. Hydrating mango, shea and coconut butter formula boosts lip moisture. Pampering gel formula provides melts onto the lips like butter. Sheer to medium colour"))))
 
 (defrule lipstick-stick-sheer-a-medium
 	(lipstick
@@ -790,8 +790,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Revlon Colorburst Lip Butter Pink Truffle")
+		(explanation "Buttery balm with beautiful shiny colour to give you baby soft, healthy glowing lips - 94% of women felt lips were softer, smoother, and instantly hydrated. Hydrating mango, shea and coconut butter formula boosts lip moisture. Pampering gel formula provides melts onto the lips like butter. Sheer to medium colour"))))
 
 (defrule lipstick-stick-sheer-a-dark
 	(lipstick
@@ -801,8 +801,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Revlon Colorburst Lip Butter Pink Truffle")
+		(explanation "Buttery balm with beautiful shiny colour to give you baby soft, healthy glowing lips - 94% of women felt lips were softer, smoother, and instantly hydrated. Hydrating mango, shea and coconut butter formula boosts lip moisture. Pampering gel formula provides melts onto the lips like butter. Sheer to medium colour"))))
 
 ;;;
 
@@ -814,8 +814,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Burt's Bees Tinted Balm Pink Blossom")
+		(explanation "For just a hint of color and 8 hours of moisture. The Botanical Waxes in these softly tinted balms will take your lips to lovely in one pretty swipe. They come in a range of 6 naturally flattering shades. 8-hour moisture, adds a hint of natural color, nourishes with Shea Butter and Botanical Waxes, and available in 6 sheer, wearable every day shades"))))
 
 (defrule lipstick-stick-sheer-b-medium
 	(lipstick
@@ -825,8 +825,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Burt's Bees Tinted Balm Hibiscus")
+		(explanation "For just a hint of color and 8 hours of moisture. The Botanical Waxes in these softly tinted balms will take your lips to lovely in one pretty swipe. They come in a range of 6 naturally flattering shades. 8-hour moisture, adds a hint of natural color, nourishes with Shea Butter and Botanical Waxes, and available in 6 sheer, wearable every day shades"))))
 
 (defrule lipstick-stick-sheer-b-dark
 	(lipstick
@@ -836,8 +836,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "Burt's Bees Tinted Balm Red Dahlia")
+		(explanation "For just a hint of color and 8 hours of moisture. The Botanical Waxes in these softly tinted balms will take your lips to lovely in one pretty swipe. They come in a range of 6 naturally flattering shades. 8-hour moisture, adds a hint of natural color, nourishes with Shea Butter and Botanical Waxes, and available in 6 sheer, wearable every day shades"))))
 
 ;;;
 
@@ -849,8 +849,8 @@
 		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NARS Sheer Lipstick Cruisin")
+		(explanation "A beautifully sheer formula infused with ingredients to improve the condition of the lips. Sheer, long lasting color pigments have been suspended in this translucent formula to provide a sophisticated shine. Lightweight formula glides on smoothly, lush shade range, patented blend of conditioners and antioxidants hydrate, nourish and protect lips"))))
 
 (defrule lipstick-stick-sheer-c-medium
 	(lipstick
@@ -860,8 +860,8 @@
 		(skintone ?sk&:(eq ?sk medium)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NARS Sheer Lipstick Dolce Vita")
+		(explanation "A beautifully sheer formula infused with ingredients to improve the condition of the lips. Sheer, long lasting color pigments have been suspended in this translucent formula to provide a sophisticated shine. Lightweight formula glides on smoothly, lush shade range, patented blend of conditioners and antioxidants hydrate, nourish and protect lips"))))
 
 (defrule lipstick-stick-sheer-c-dark
 	(lipstick
@@ -871,8 +871,8 @@
 		(skintone ?sk&:(eq ?sk dark)))
 	=>
 	(assert (recommendation
-		(name lipstick-a)
-		(explanation "Cocok kerja di air"))))
+		(name "NARS Sheer Lipstick Outsider")
+		(explanation "A beautifully sheer formula infused with ingredients to improve the condition of the lips. Sheer, long lasting color pigments have been suspended in this translucent formula to provide a sophisticated shine. Lightweight formula glides on smoothly, lush shade range, patented blend of conditioners and antioxidants hydrate, nourish and protect lips"))))
 
 ;;;*************************
 ;;;* LIPSTICK RULE: REPORT *
