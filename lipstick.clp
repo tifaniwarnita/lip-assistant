@@ -64,7 +64,7 @@
 	else (if (eq ?type price-answer) then
 		(return (or (eq ?answer a) (eq ?answer b) (eq ?answer c)))
 	else (if (eq ?type skintone-answer) then
-		(return (or (eq ?answer white) (eq ?answer olive) (eq ?answer warm) (eq ?answer cool)))
+		(return (or (eq ?answer light) (eq ?answer medium) (eq ?answer dark)))
  	else (return (> (str-length ?answer) 0))))))))))
 
 (deffunction ask-user (?question ?type)
@@ -84,9 +84,9 @@
 			(printout t "(a/b/c) " crlf)
 			(printout t "a. <Rp100.000" crlf)
 			(printout t "b. Rp100.000 - Rp200.000" crlf)
-			(printout t "a. >Rp200.000" crlf)
+			(printout t "c. >Rp200.000" crlf)
 		else (if (eq ?type skintone-answer) then
-			(printout t "(white/olive/warm/cool) ")))))))
+			(printout t "(light/medium/dark) ")))))))
 		(bind ?answer (read)))
 	(return ?answer))
 
@@ -119,9 +119,9 @@
 		(text "What is your skin complexion?")))
 
 
-;;;*****************
-;;;* LIPSTICK RULE *
-;;;*****************
+;;;**********************
+;;;* LIPSTICK RULE: ASK *
+;;;**********************
 
 (defmodule ask)
 
@@ -144,6 +144,11 @@
 	;; And finally, exit this module
 	(return))
 
+
+;;;***************************
+;;;* LIPSTICK RULE: START UP *
+;;;***************************
+
 (defmodule startup)
 
 (defrule print-banner
@@ -157,6 +162,11 @@
 	(printout t "I will tell you what kind of" crlf)
 	(printout t "lipstick you may need." crlf)
 	(printout t "*****************************" crlf crlf))
+
+
+;;;****************************
+;;;* LIPSTICK RULE: INTERVIEW *
+;;;****************************
 
 (defmodule interview)
 
@@ -206,18 +216,643 @@
 		(price ?pr)
 		(skintone ?sk))))
 
+;;;*********************************
+;;;* LIPSTICK RULE: RECOMMENDATION *
+;;;*********************************
+
 (defmodule recommend)
 
-(defrule lipstick-a
+(defrule lipstick-liquid-matte-a-light
 	(lipstick
 		(shape ?sh&:(eq ?sh liquid))
 		(texture ?tx&:(eq ?tx matte))
 		(price ?pr&:(eq ?pr a))
-		(skintone ?sk&:(eq ?sk white)))
+		(skintone ?sk&:(eq ?sk light)))
 	=>
 	(assert (recommendation
 		(name lipstick-a)
 		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-matte-a-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-matte-a-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-liquid-matte-b-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-matte-b-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-matte-b-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-liquid-matte-c-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-matte-c-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-matte-c-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule lipstick-liquid-stain-a-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-stain-a-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-stain-a-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-liquid-stain-b-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-stain-b-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-stain-b-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-liquid-stain-c-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-stain-c-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-stain-c-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx stain))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule lipstick-liquid-gloss-a-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-gloss-a-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-gloss-a-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-liquid-gloss-b-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-gloss-b-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-gloss-b-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-liquid-gloss-c-light
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-gloss-c-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-liquid-gloss-c-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh liquid))
+		(texture ?tx&:(eq ?tx gloss))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule lipstick-stick-matte-a-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-matte-a-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-matte-a-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-stick-matte-b-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-matte-b-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-matte-b-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-stick-matte-c-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-matte-c-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-matte-c-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx matte))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule lipstick-stick-satin-a-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-satin-a-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-satin-a-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-stick-satin-b-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-satin-b-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-satin-b-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-stick-satin-c-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-satin-c-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-satin-c-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx satin))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule lipstick-stick-sheer-a-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-sheer-a-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-sheer-a-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr a))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-stick-sheer-b-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-sheer-b-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-sheer-b-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr b))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;
+
+(defrule lipstick-stick-sheer-c-light
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk light)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-sheer-c-medium
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk medium)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+(defrule lipstick-stick-sheer-c-dark
+	(lipstick
+		(shape ?sh&:(eq ?sh stick))
+		(texture ?tx&:(eq ?tx sheer))
+		(price ?pr&:(eq ?pr c))
+		(skintone ?sk&:(eq ?sk dark)))
+	=>
+	(assert (recommendation
+		(name lipstick-a)
+		(explanation "Cocok kerja di air"))))
+
+;;;*************************
+;;;* LIPSTICK RULE: REPORT *
+;;;*************************
 
 (defmodule report)
 
@@ -229,7 +864,7 @@
 		(name ?f2&
 	:(< (str-compare ?f2 ?f1) 0))))
 	=>
-	(printout t "*** Please take a copy of form " ?f1 crlf)
+	(printout t "*** The most suitable lipstick for you is " ?f1 crlf)
 	(printout t "Explanation: " ?e crlf crlf)
 	(retract ?r1))
 
